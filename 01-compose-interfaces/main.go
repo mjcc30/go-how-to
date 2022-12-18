@@ -22,39 +22,39 @@ type HashReaderImpl struct {
 
 // create a new hash reader function wich take a byte and returns the hash of the reader
 func NewHashReader(b []byte) *HashReaderImpl {
-	return &HashReaderImpl{
-		Reader: bytes.NewReader(b),
-		buf:    bytes.NewBuffer(b),
+	return &HashReaderImpl{ // create a new hash reader
+		Reader: bytes.NewReader(b), // create a new reader
+		buf:    bytes.NewBuffer(b), // create a new buffer
 	}
 }
 
 // create hash function wich return an encoded string of the hash
 func (h *HashReaderImpl) Hash() string {
-	return hex.EncodeToString(h.buf.Bytes())
+	return hex.EncodeToString(h.buf.Bytes()) // return the hash of the reader
 }
 
 // create a broadcast function wich take  and returns nil
 func Broadcast(r io.Reader) (string,error) {
-	b, err := ioutil.ReadAll(r)
+	b, err := ioutil.ReadAll(r) // read all from the reader
 	if err != nil {
 		return "", err
 	}
 	fmt.Println("string of the bytes: ",string(b))
-	return string(b), nil
+	return string(b), nil // return the string of the bytes
 }
 
 // hash and broadcast function
 func HashAndBroadcast(r HashReader) (string,error) {
-	hash := r.Hash()
+	hash := r.Hash() // get the hash of the reader
 	fmt.Println("hash:", hash)
 
-	return Broadcast(r)
+	return Broadcast(r) // return the broadcasted bytes
 }
 
 // the main function
 func main() {
-	var test string = "hello high value software enginer"
-	payload := []byte(test)
-	h := NewHashReader(payload)
-	HashAndBroadcast(h)
+	var test string = "hello high value software enginer" // the string to hash
+	payload := []byte(test) // the bytes to hash
+	h := NewHashReader(payload) // the hash reader
+	HashAndBroadcast(h) // hash and broadcast
 }
