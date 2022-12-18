@@ -1,13 +1,17 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
-// test Hello function
-func TestHello(t *testing.T) {
-	got := Hello()
-	want := "Hello, world"
-
+// test fetchUser function
+func TestFetchUser(t *testing.T) {
+	got := FetchUser()
+	want := "BOB"
 	if got != want {
 		t.Errorf("got %q want %q", got, want)
 	}
 }
+
+// TODO: test fetchUserLikes function
+// TODO: test fetchUserMatch function
