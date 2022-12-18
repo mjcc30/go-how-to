@@ -1,15 +1,22 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 )
 
-// public Hello function which returns a string
-func Hello() string {
-	return "Hello, world"
+func handleGetFoo(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.WriteHeader(http.StatusMethodNotAllowed)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("FOO"))
 }
 
-// the main function
 func main() {
-	fmt.Println(Hello())
+	http.HandleFunc("/foo", handleGetFoo)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err)
+	}
 }
