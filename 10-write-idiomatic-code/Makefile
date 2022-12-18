@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = write_idiomatic_code
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = compose_typed_functions
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = stream_large_files_over_tcp
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

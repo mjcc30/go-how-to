@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = test_http_handlers
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

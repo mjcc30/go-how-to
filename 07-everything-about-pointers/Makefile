@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = everything_about_pointers
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

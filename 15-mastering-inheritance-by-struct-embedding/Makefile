@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = mastering_inheritance_by_struct_embedding
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

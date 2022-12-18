@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = building_cat_fact_json_api_with_mongoDB
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

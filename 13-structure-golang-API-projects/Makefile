@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = structure_golang_API_projects
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

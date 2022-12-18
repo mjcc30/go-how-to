@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = build_and_structure_JSON_API_project
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

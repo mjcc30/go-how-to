@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = build_custom_TCP_server
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

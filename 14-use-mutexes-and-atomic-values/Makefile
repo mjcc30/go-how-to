@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = use_mutexes_and_atomic_values
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

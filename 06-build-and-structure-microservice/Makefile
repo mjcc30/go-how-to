@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = build_and_structure_microservice
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

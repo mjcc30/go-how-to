@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = context_package
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

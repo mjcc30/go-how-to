@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = build_chat_and_data_feed_with_websockets
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = execute_LUA_scripts
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = goroutines_aggregating_data
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init

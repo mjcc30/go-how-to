@@ -1,4 +1,4 @@
-EXEC = compose_interfaces
+EXEC = use_io_multiwriter
 BIN_SRC=bin/$(EXEC)
 
 .PHONY: init
